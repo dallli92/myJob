@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" android:layout_marginBottom="8dp" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" android:layout_marginRight="8dp" android:layout_marginEnd="8dp">
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" app:srcCompat="@mipmap/ic_launcher"
+                    android:id="@+id/imageView"/>
+            <TextView
+                    android:layout_toRightOf="@id/imageView"
+                    android:text="TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/jobNameList" android:textSize="18sp"
+                    android:textStyle="bold"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_toRightOf="@id/imageView"
+                    android:layout_below="@id/jobNameList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/jobAssignedByList"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_alignParentRight="true"
+
+                    android:layout_alignBottom="@id/imageView" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/jobAssignedTimeList"/>
+            <Button
+                    android:layout_alignBottom="@id/jobNameList"
+                    android:layout_alignEnd="@id/jobAssignedTimeList"
+                    android:layout_alignRight="@id/jobAssignedTimeList"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/editBtn"
+                    android:background="@android:drawable/ic_menu_edit"/>
+            <Button
+                    android:layout_toLeftOf="@id/editBtn"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/deleteBtn"
+                    android:layout_marginRight="10dp"
+                    android:background="@android:drawable/ic_delete"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/jobAssignedByList"
+                    android:id="@+id/jobAssignedToList"
+                    android:layout_toRightOf="@id/imageView"
+            />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</android.support.constraint.ConstraintLayout>
